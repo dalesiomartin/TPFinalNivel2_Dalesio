@@ -30,15 +30,18 @@
         {
             this.pbxArticulo = new System.Windows.Forms.PictureBox();
             this.dgwCatalogo = new System.Windows.Forms.DataGridView();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwCatalogo)).BeginInit();
             this.SuspendLayout();
             // 
             // pbxArticulo
             // 
-            this.pbxArticulo.Location = new System.Drawing.Point(725, 51);
+            this.pbxArticulo.Location = new System.Drawing.Point(772, 23);
             this.pbxArticulo.Name = "pbxArticulo";
-            this.pbxArticulo.Size = new System.Drawing.Size(311, 301);
+            this.pbxArticulo.Size = new System.Drawing.Size(225, 360);
+            this.pbxArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxArticulo.TabIndex = 0;
             this.pbxArticulo.TabStop = false;
             // 
@@ -50,15 +53,37 @@
             this.dgwCatalogo.MultiSelect = false;
             this.dgwCatalogo.Name = "dgwCatalogo";
             this.dgwCatalogo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgwCatalogo.Size = new System.Drawing.Size(673, 300);
+            this.dgwCatalogo.Size = new System.Drawing.Size(723, 303);
             this.dgwCatalogo.TabIndex = 1;
             this.dgwCatalogo.SelectionChanged += new System.EventHandler(this.dgwCatalogo_SelectionChanged);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(35, 370);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(134, 33);
+            this.btnAgregar.TabIndex = 2;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Location = new System.Drawing.Point(185, 370);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(134, 33);
+            this.btnModificar.TabIndex = 3;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // frmCatalogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1048, 450);
+            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dgwCatalogo);
             this.Controls.Add(this.pbxArticulo);
             this.Name = "frmCatalogo";
@@ -74,6 +99,8 @@
 
         private System.Windows.Forms.PictureBox pbxArticulo;
         private System.Windows.Forms.DataGridView dgwCatalogo;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnModificar;
     }
 }
 

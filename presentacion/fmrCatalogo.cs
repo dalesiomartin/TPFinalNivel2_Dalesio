@@ -34,12 +34,15 @@ namespace presentacion
 
             ArticuloNegocio negocio = new ArticuloNegocio();
       
-
                try
             {
                 ListaArticulo = negocio.listar();
                
                 dgwCatalogo.DataSource = ListaArticulo;
+
+                ocularColumnas();
+
+               // cargarImagen(ListaArticulo[0].ImagenUrl);
             }
             catch (Exception ex)
             {
@@ -50,15 +53,52 @@ namespace presentacion
         }
 
 
+        private void ocularColumnas() {
+            dgwCatalogo.Columns["ImagenUrl"].Visible=false;
+            dgwCatalogo.Columns["Id"].Visible = false;
+        }
+
         private void dgwCatalogo_SelectionChanged(object sender, EventArgs e)
         {
             if(dgwCatalogo.CurrentRow != null)
             {
                 Articulo seleccionado = (Articulo)dgwCatalogo.CurrentRow.DataBoundItem;
-
+                cargarImagen(seleccionado.ImagenUrl);
             }
 
 
+        }
+
+
+        private void cargarImagen(string imagen) {
+            try
+            {
+                pbxArticulo.Load(imagen);
+            }
+            catch (Exception)
+            {
+
+                pbxArticulo.Load("https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg");
+            }
+        
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmAltaProducto alta = new frmAltaProducto();
+            alta.ShowDialog();
+
+            cargar();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado;
+            seleccionado = (Articulo)dgwCatalogo.CurrentRow.DataBoundItem;
+
+            frmAltaProducto modificar = new frmAltaProducto(seleccionado);
+            modificar.ShowDialog();
+            cargar();
 
         }
     }

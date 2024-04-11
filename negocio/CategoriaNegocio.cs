@@ -17,15 +17,32 @@ namespace negocio
 
             try
             {
+                datos.setearConsulta("select Id,Descripcion from CATEGORIAS");
 
+                datos.ejecutarLectura();
+
+                while (datos.lectorData.Read())
+                {
+                    Categoria aux = new Categoria();
+                    aux.Id = (int)datos.lectorData["Id"];
+                    aux.Descripcion = (string)datos.lectorData["Descripcion"];
+
+                    lista.Add(aux);
+
+                }
+                return lista;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
             }
             
-            return listar();
+            
         
         }
         
