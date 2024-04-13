@@ -32,6 +32,7 @@
             this.dgwCatalogo = new System.Windows.Forms.DataGridView();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
+            this.btnEliminarD = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwCatalogo)).BeginInit();
             this.SuspendLayout();
@@ -77,11 +78,22 @@
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
+            // btnEliminarD
+            // 
+            this.btnEliminarD.Location = new System.Drawing.Point(401, 370);
+            this.btnEliminarD.Name = "btnEliminarD";
+            this.btnEliminarD.Size = new System.Drawing.Size(134, 33);
+            this.btnEliminarD.TabIndex = 4;
+            this.btnEliminarD.Text = "Eliminar";
+            this.btnEliminarD.UseVisualStyleBackColor = true;
+            this.btnEliminarD.Click += new System.EventHandler(this.btnEliminarD_Click);
+            // 
             // frmCatalogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1048, 450);
+            this.Controls.Add(this.btnEliminarD);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dgwCatalogo);
@@ -101,6 +113,7 @@
         private System.Windows.Forms.DataGridView dgwCatalogo;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnEliminarD;
     }
 }
 

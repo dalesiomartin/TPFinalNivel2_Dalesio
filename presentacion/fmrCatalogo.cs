@@ -101,5 +101,37 @@ namespace presentacion
             cargar();
 
         }
+
+        private void btnEliminarD_Click(object sender, EventArgs e)
+        {
+
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            Articulo seleccionado;
+
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("¿Seguro que quieres eliminar?", "ELIMINADO", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (respuesta == DialogResult.Yes)
+                {
+                    seleccionado = (Articulo)dgwCatalogo.CurrentRow.DataBoundItem;
+
+                    negocio.eliminar(seleccionado.Id);
+
+                    cargar();
+                }
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+      
+
+       
     }
 }
