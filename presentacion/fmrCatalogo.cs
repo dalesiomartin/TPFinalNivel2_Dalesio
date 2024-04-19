@@ -30,8 +30,8 @@ namespace presentacion
             cboCampo.Items.Add("Código de Artículo");
             cboCampo.Items.Add("Nombre");
             cboCampo.Items.Add("Descripción");
-            //cboCampo.Items.Add("Marca");
-            //cboCampo.Items.Add("Categoria");
+            cboCampo.Items.Add("Marca");
+            cboCampo.Items.Add("Categoria");
             cboCampo.Items.Add("Precio");
 
         }
@@ -170,7 +170,7 @@ namespace presentacion
         {
             foreach (char caracter in cadena)
             {
-                if (!(char.IsNumber(caracter)))
+                if (!(char.IsNumber(caracter) || caracter == '.'))
                 {
                     return false;
                 }
@@ -210,7 +210,7 @@ namespace presentacion
 
             if (filtro.Length >= 3)
             {
-                listaFiltrada = listaArticulo.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()) || x.Descripcion.ToUpper().Contains(filtro.ToUpper()) || x.Codigo.ToUpper().Contains(filtro.ToUpper()) );
+                listaFiltrada = listaArticulo.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()) || x.Descripcion.ToUpper().Contains(filtro.ToUpper()) || x.Codigo.ToUpper().Contains(filtro.ToUpper()) || x.Marca.Descripcion.ToUpper().Contains(filtro.ToUpper()) || x.Categoria.Descripcion.ToUpper().Contains(filtro.ToUpper()) );
             }
             else {
                 listaFiltrada = listaArticulo;
@@ -225,22 +225,6 @@ namespace presentacion
 
         private void cboCampo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            /* string opcion = cboCampo.SelectedItem.ToString();
-
-             if (opcion == "Precio")
-             {
-                 cboCriterio.Items.Clear();
-                 cboCriterio.Items.Add("Mayor a");
-                 cboCriterio.Items.Add("Menor a");
-                 cboCriterio.Items.Add("Igual a");
-             }
-             else {
-                 cboCriterio.Items.Clear();
-                 cboCriterio.Items.Add("Termina con");
-                 cboCriterio.Items.Add("Empieza con");
-                 cboCriterio.Items.Add("Igual a");
-
-             } */
 
             if (cboCampo.SelectedItem != null) // Verificar si hay un elemento seleccionado
             {

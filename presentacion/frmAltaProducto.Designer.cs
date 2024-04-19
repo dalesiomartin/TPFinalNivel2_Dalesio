@@ -52,11 +52,11 @@
             // lbCodigo
             // 
             this.lbCodigo.AutoSize = true;
-            this.lbCodigo.Location = new System.Drawing.Point(53, 34);
+            this.lbCodigo.Location = new System.Drawing.Point(53, 38);
             this.lbCodigo.Name = "lbCodigo";
-            this.lbCodigo.Size = new System.Drawing.Size(40, 13);
+            this.lbCodigo.Size = new System.Drawing.Size(81, 13);
             this.lbCodigo.TabIndex = 0;
-            this.lbCodigo.Text = "Código";
+            this.lbCodigo.Text = "Cód de Artículo";
             // 
             // lbNombre
             // 
@@ -116,7 +116,7 @@
             // 
             this.txtCodigo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCodigo.Location = new System.Drawing.Point(130, 31);
+            this.txtCodigo.Location = new System.Drawing.Point(137, 31);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(141, 20);
             this.txtCodigo.TabIndex = 0;
@@ -125,7 +125,7 @@
             // 
             this.txtNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNombre.Location = new System.Drawing.Point(130, 67);
+            this.txtNombre.Location = new System.Drawing.Point(137, 67);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(141, 20);
             this.txtNombre.TabIndex = 1;
@@ -134,7 +134,7 @@
             // 
             this.txtDescrip.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDescrip.Location = new System.Drawing.Point(130, 101);
+            this.txtDescrip.Location = new System.Drawing.Point(137, 101);
             this.txtDescrip.Name = "txtDescrip";
             this.txtDescrip.Size = new System.Drawing.Size(141, 20);
             this.txtDescrip.TabIndex = 2;
@@ -143,7 +143,7 @@
             // 
             this.txtPrecio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPrecio.Location = new System.Drawing.Point(130, 246);
+            this.txtPrecio.Location = new System.Drawing.Point(137, 246);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(141, 20);
             this.txtPrecio.TabIndex = 7;
@@ -152,7 +152,7 @@
             // 
             this.txtImagen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtImagen.Location = new System.Drawing.Point(130, 209);
+            this.txtImagen.Location = new System.Drawing.Point(137, 209);
             this.txtImagen.Name = "txtImagen";
             this.txtImagen.Size = new System.Drawing.Size(141, 20);
             this.txtImagen.TabIndex = 5;
@@ -163,7 +163,7 @@
             this.cbxMarca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxMarca.FormattingEnabled = true;
-            this.cbxMarca.Location = new System.Drawing.Point(130, 139);
+            this.cbxMarca.Location = new System.Drawing.Point(137, 139);
             this.cbxMarca.Name = "cbxMarca";
             this.cbxMarca.Size = new System.Drawing.Size(141, 21);
             this.cbxMarca.TabIndex = 3;
@@ -173,7 +173,7 @@
             this.cbxCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxCategoria.FormattingEnabled = true;
-            this.cbxCategoria.Location = new System.Drawing.Point(130, 175);
+            this.cbxCategoria.Location = new System.Drawing.Point(137, 175);
             this.cbxCategoria.Name = "cbxCategoria";
             this.cbxCategoria.Size = new System.Drawing.Size(141, 21);
             this.cbxCategoria.TabIndex = 4;
@@ -213,7 +213,7 @@
             // btnAgregaImagen
             // 
             this.btnAgregaImagen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregaImagen.Location = new System.Drawing.Point(287, 204);
+            this.btnAgregaImagen.Location = new System.Drawing.Point(293, 204);
             this.btnAgregaImagen.Name = "btnAgregaImagen";
             this.btnAgregaImagen.Size = new System.Drawing.Size(22, 28);
             this.btnAgregaImagen.TabIndex = 6;
